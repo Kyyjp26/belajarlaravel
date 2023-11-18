@@ -1,0 +1,10 @@
+body {
+    background-color: beige;
+}
+
+h1 {
+    background-color: goldenrod;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
