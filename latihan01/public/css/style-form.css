@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&family=Montserrat&family=Pacifico&family=Playfair+Display:ital,wght@1,500&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgb(37, 150, 195), rgb(50, 122, 211));
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 25rem;
+    border-radius: 5px;
+}
+
+.container h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form{
+    width: 20rem;
+    margin-top: 15px;
+}
+
+.label{
+    font-family: 'poppins';
+    font-size: 17px;
+}
+
+.input{
+    width: 100%;
+    height: 2rem;
+    margin-top: 4px;
+    border: 1px solid #727272;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    font-family: 'montserrat';
+}
+
+.error{
+    font-family: 'montserrat';
+    color: rgb(219, 71, 71);
+    margin-top: 5px;
+}
+
+.error-invalid{
+    font-family: 'montserrat';
+    color: rgb(219, 71, 71);
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.success{
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: #5ce13eac;
+    width: 70%;
+    height: 3.5rem;
+    border-radius: 5px;
+    padding-left: 20px;
+    color: #3e7a30;
+}
+
+.button{
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(37, 204, 242);
+    font-size: 20px;
+    font-family: 'poppins';
+    transition: ease .5s;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(41, 177, 207);
+}
+
+.form span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins';
+}
+
+.form span a{
+    margin-left: 10px;
+}

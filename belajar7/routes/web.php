@@ -46,7 +46,12 @@ Route::get('/restore', [MahasiswaController::class,'restore']);
 Route::get('/force-delete', [MahasiswaController::class,'forceDelete']);
 
 // Form Procesing & Validation
-Route::get('/', [SiswaController::class, 'index']);
+Route::get('/form-pendaftaran/{locale?}', [SiswaController::class, 'formPendaftaran']);
 Route::post('/proses-form', [SiswaController::class, 'prosesForm']);
 Route::post('/proses-form-validator', [SiswaController::class, 'prosesFormValidator']);
 Route::post('/proses-form-request', [SiswaController::class, 'prosesFormRequest']);
+
+// Localization
+Route::get('/laravel', function () {
+    return view('welcome');
+});

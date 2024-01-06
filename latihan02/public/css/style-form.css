@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&family=Montserrat&family=Pacifico&family=Playfair+Display:ital,wght@1,500&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/bg-form.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'poppins';
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #9c9c9c67;
+    width: 80rem;
+    padding: 30px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.grid-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 40px;
+}
+
+.grid-1 h2{
+    font-size: 35px;
+}
+
+.grid-1 p{
+    text-align: left;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.grid-1 a{
+    border: 3px solid rgb(255, 255, 255);
+    padding: 10px 0px;
+    width: 10rem;
+    border-radius: 30rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-top: 40px;
+    transition: ease .5s;
+}
+
+.grid-1 a:hover{
+    background-color: white;
+    color: black;
+}
+
+.grid-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-2 h2{
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.form{
+    width: 23rem;
+    margin-top: 15px;
+}
+
+.label{
+    font-family: 'merriweather sans';
+    font-size: 18px;
+}
+
+.input{
+    width: 100%;
+    height: 2rem;
+    margin-top: 5px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+    padding-left: 10px;
+    font-family: 'montserrat';
+    background-color: #ffffff4f;
+    color: white;
+}
+
+
+.button{
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(55, 190, 239);
+    font-size: 19px;
+    color: white;
+    font-family: 'poppins';
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: ease .5s;
+}
+
+.button:hover{
+    background-color: rgb(49, 169, 212);
+}
+
+.error{
+    font-family: 'montserrat';
+    margin-top: 5px;
+    margin-left: 3px;
+    color: rgba(255, 42, 42, 0.941);
+}
+
+.error-2{
+    font-family: 'montserrat';
+    margin-top: 5px;
+    margin-left: 3px;
+    color: rgba(255, 42, 42, 0.941);
+    text-align: center;
+}
+
+.invalid{
+    border: 1px solid rgba(255, 42, 42, 0.941);
+}
+
+.success{
+    position: absolute;
+    top: 3rem;
+    background-color: rgba(86, 243, 42, 0.623);
+    height: 4rem;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border-radius: 15px;
+    font-size: 19px;
+    color: rgb(26, 120, 0);
+}

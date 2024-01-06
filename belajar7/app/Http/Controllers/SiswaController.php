@@ -4,17 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DaftarSiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Validator;
 use Spatie\FlareClient\View;
 
 class SiswaController extends Controller
 {
-    public function index()
+    public function formPendaftaran($locale = 'id')
     {
-        return view('form-pendaftaran');
+        App::setLocale($locale);
+        return view('form-pendaftaran', ["locale" => $locale]);
     }
     public function prosesForm(Request $request)
     {
+        App::setLocale($request->locale);
         $validateData = $request->validate([
             'nim' => 'required|size:8',
             'nama' => 'required|min:3|max:50',
