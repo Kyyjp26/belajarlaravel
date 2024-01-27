@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\LoginController;
@@ -40,7 +41,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/posts', [PostController::class, 'index']);
-Route::get('/posts/{post:slug}', [PostController::class, 'show']);
+Route::get('/posts/{post:slug}', [PostController::class, 'show'])->name('post');
 
 Route::get('/categories', function() {
     return view('categories', [
@@ -82,3 +83,11 @@ Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'check
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+
+Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
+
+Route::get('/comment/{slug}/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
+Route::put('/comment/{slug}/{comment}', [CommentController::class, 'update'])->name('comments.update');
+
+Route::delete('/comment/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
+

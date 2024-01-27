@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -30,11 +31,14 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
+        $comments = $post->comments;
+
         return view('post', [
             'title' => 'Single Post',
             'post' => $post,
+            'comments' => $comments,
             'active' => 'posts',
+            'slug' => $post->slug
         ]);
     }
-
 }
